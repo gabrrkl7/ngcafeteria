@@ -44,6 +44,15 @@
     border-radius: 20px;
     margin: 0.5rem 0 2rem;
   }
+
+  .criar-pedidos form .input-valor {
+    border: none;
+    width: 300px;
+    height: 40px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    margin: 0.5rem 0 2rem;
+  }
   
   
   .criar-pedidos form .textarea {

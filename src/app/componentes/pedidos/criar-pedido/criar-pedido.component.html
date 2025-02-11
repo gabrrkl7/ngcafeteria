@@ -27,12 +27,11 @@
 
         <label for="valor">Valor</label>
         <input 
-        class="input" 
+        class="input-valor" 
         type="number" 
         name="descricao" 
         id="descricao"
         placeholder="Digite o valor do pedido"
-        value="R$" 
         oninput="ajustarValor(this);" 
         >
 
@@ -44,7 +43,7 @@
                     type="radio" 
                     name="modelo-card" 
                     id="modelo1" 
-                    [(ngModel)]="pedido.conteudo"
+                    
                     >
 
                     <div class="custom-radio">
