@@ -1,0 +1,11 @@
+<section class="container">
+    <header class="header d-flex">
+        <h2 class="ff-inter">Pedidos</h2>
+        <button routerLink="/criarPedido" class="botao">Adicionar pedido</button>
+    </header>
+    <div class="mural">
+        <div *ngFor="let pedido of listaPedidos">
+            <app-pedido></app-pedido>
+        </div>
+    </div>
+</section>

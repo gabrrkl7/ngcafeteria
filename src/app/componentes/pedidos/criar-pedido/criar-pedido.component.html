@@ -12,7 +12,7 @@
         name="pedido" 
         id="pedido" 
         placeholder="Qual o seu pedido?"
-        value=''
+        [(ngModel)]="pedido.conteudo"
         >
 
         <label for="descricao">Descrição</label>
@@ -22,17 +22,18 @@
         name="descricao" 
         id="descricao"
         placeholder="Digite a descrição do pedido"
-        value=''
+        [(ngModel)]="pedido.descricao"
         >
 
         <label for="valor">Valor</label>
         <input 
         class="input-valor" 
         type="number" 
-        name="descricao" 
-        id="descricao"
+        name="valor" 
+        id="valor"
         placeholder="Digite o valor do pedido"
         oninput="ajustarValor(this);" 
+        [(ngModel)]="pedido.valor"
         >
 
         <label for="modelo">Como você gostaria do seu café?</label>
@@ -43,7 +44,7 @@
                     type="radio" 
                     name="modelo-card" 
                     id="modelo1" 
-                    
+                    [(ngModel)]="pedido.modelo"
                     >
 
                     <div class="custom-radio">
@@ -70,6 +71,7 @@
                     name="modelo-card" 
                     id="modelo2" 
                     value="modelo2"
+                    [(ngModel)]="pedido.modelo"
                     >
 
                     <div class="custom-radio">
@@ -96,6 +98,7 @@
                     name="modelo-card" 
                     id="modelo3" 
                     value="modelo3"
+                    [(ngModel)]="pedido.modelo"
                     >
 
                     <div class="custom-radio">
@@ -110,15 +113,15 @@
                     <i class="fa-solid fa-coffee fa-1x"></i>
                     <i class="fa-solid fa-coffee fa-1x"></i>
                     <i class="fa-solid fa-coffee fa-1x"></i>
-                    <p class="conteudo"> {{pedido.conteudo}} </p>
-                    <p class="descricao"><b> {{pedido.descricao}} </b></p>
+                    <p class="conteudo"><b> {{pedido.conteudo}} </b></p>
+                    <p class="descricao"> {{pedido.descricao}} </p>
                     <p class="valor"> R${{pedido.valor}} </p>
                 </div>
             </div>
         </div>  
         <div class="acoes">
             <button (click)="criarPedido()" class="botao">Salvar</button>
-            <button (click)="cancelar()" class="botao">Cancelar</button>
+            <button class="botao" routerLink="/listarPedido">Cancelar</button>
         </div>      
     </form>
 </section>

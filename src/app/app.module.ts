@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CriarPedidoComponent } from './componentes/pedidos/criar-pedido/criar-pedido.component';
+import { FormsModule } from '@angular/forms';
+import { ListarPedidoComponent } from './componentes/pedidos/listar-pedido/listar-pedido.component';
+import { PedidoComponent } from './componentes/pedidos/pedido/pedido.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { CriarPedidoComponent } from './componentes/pedidos/criar-pedido/criar-p
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    CriarPedidoComponent
+    CriarPedidoComponent,
+    ListarPedidoComponent,
+    PedidoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
