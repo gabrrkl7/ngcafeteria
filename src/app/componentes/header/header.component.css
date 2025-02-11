@@ -1,48 +1,73 @@
-.cabecalho {
+  .cabecalho {
     background: url(../../../assets/imagens-angular/imagensCurso/fundo-cabecalho.png);
     background-size: cover;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     max-height: 300px;
+    padding: 2rem;
+    box-sizing: border-box;
   }
-  
+
   .cabecalho .logo {
-    width: 30%;
-    padding: 0 3rem  ;
+    width: 45%;
+    padding: 0 2rem;
+    padding-top: 2rem;
   }
-  
+
   .cabecalho .logo img {
-    width: 90%;
+    width: 100%;
     max-width: 200px;
-    margin-bottom: 2rem;
   }
-  
-  .cabecalho .imagem{
-    width: 30%;
+
+  .cabecalho .imagem {
+    width: 45%;
+    max-width: 400px;
   }
-  
+
   .cabecalho p {
     font-size: 2rem;
     color: #6a3d1058;
-    padding-bottom: 60px;
+    margin-bottom: 100px;
     font-weight: 800;
   }
-  
-  @media (max-width: 576px) {
-    .cabecalho .logo {
-      padding: 2rem;
+
+  @media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        justify-content: center;
+        max-height: none;
     }
+
+    .cabecalho .logo {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .cabecalho .imagem {
+        width: 80%;
+        display: block;
+        margin-top: 2rem;
+    }
+
     .cabecalho p {
-      font-size: 1.5rem
+        font-size: 1.5rem;
+        text-align: center;
     }
   }
-  
-  @media (max-width: 768px) {
-    .cabecalho .logo {
-      width: 90%;
+
+  @media (max-width: 576px) {
+    .cabecalho .logo img {
+        max-width: 150px;
     }
+
+    .cabecalho p {
+        font-size: 1.2rem;
+    }
+
     .cabecalho .imagem {
-      display: none;
+        width: 100%;
     }
   }

@@ -6,32 +6,120 @@
     </header>
     <form>
         <label for="pedido">Pedido</label>
-        <input class="input" type="textarea" name="pedido" id="pedido" placeholder="Qual o seu pedido?">
+        <input 
+        class="input" 
+        type="textarea" 
+        name="pedido" 
+        id="pedido" 
+        placeholder="Qual o seu pedido?"
+        value=''
+        >
 
-        <label for="observacao">Observações</label>
-        <input class="input" type="textarea" name="observacao" id="observacao"
-            placeholder="Digite as observações do pedido do pedido?">
+        <label for="descricao">Descrição</label>
+        <input 
+        class="input" 
+        type="textarea" 
+        name="descricao" 
+        id="descricao"
+        placeholder="Digite a descrição do pedido"
+        value=''
+        >
+
+        <label for="valor">Valor</label>
+        <input 
+        class="input" 
+        type="number" 
+        name="descricao" 
+        id="descricao"
+        placeholder="Digite o valor do pedido"
+        value="R$" 
+        oninput="ajustarValor(this);" 
+        >
 
         <label for="modelo">Como você gostaria do seu café?</label>
         <div class="container-radio">
             <div class="radio-modelo">
                 <label for="modelo1">
-                    <input type="radio" name="modelo-card" id="modelo1" value="modelo1">
+                    <input 
+                    type="radio" 
+                    name="modelo-card" 
+                    id="modelo1" 
+                    value="modelo1"
+                    >
 
                     <div class="custom-radio">
                         <span></span>
                     </div>
-                    <span>Modelo 1</span>
+                    <span class="ff-roboto-mono">Fraco</span>    
                 </label>
-            </div>
-        </div>
-        Prévia:
-        <div class="modelo modelo1 ff-roboto-mono">
-            <img src="../../../assets/imagens-angular/imagensCurso/modelo1.png" alt="fraco">
-            <p class="conteudo">Conteudo</p>
-            <p class="observacao"><b>Observação</b></p>
-        </div>
 
-        
+
+                Prévia:
+                <div class="modelo modelo1 ff-roboto-mono">
+                    Intensidade:
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <p class="conteudo"> {{pedido.conteudo}} </p>
+                    <p class="descricao"><b> {{pedido.descricao}} </b></p>
+                    <p class="valor"> R${{pedido.valor}} </p>
+                </div>
+            </div>
+
+            <div class="radio-modelo">
+                <label for="modelo2">
+                    <input 
+                    type="radio" 
+                    name="modelo-card" 
+                    id="modelo2" 
+                    value="modelo2"
+                    >
+
+                    <div class="custom-radio">
+                        <span></span>
+                    </div>
+                    <span class="ff-roboto-mono">Médio</span>
+                    
+                </label>
+                Prévia:
+                <div class="modelo modelo1 ff-roboto-mono">
+                    Intensidade:
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <p class="conteudo"> {{pedido.conteudo}} </p>
+                    <p class="descricao"><b> {{pedido.descricao}} </b></p>
+                    <p class="valor"> R${{pedido.valor}} </p>
+                </div>
+            </div>
+
+            <div class="radio-modelo">
+                <label for="modelo3">
+                    <input 
+                    type="radio" 
+                    name="modelo-card" 
+                    id="modelo3" 
+                    value="modelo3"
+                    >
+
+                    <div class="custom-radio">
+                        <span></span>
+                    </div>
+                    <span class="ff-roboto-mono">Forte</span>
+                    
+                </label>
+                Prévia:
+                <div class="modelo modelo1 ff-roboto-mono">
+                    Intensidade:
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <p class="conteudo"> {{pedido.conteudo}} </p>
+                    <p class="descricao"><b> {{pedido.descricao}} </b></p>
+                    <p class="valor"> R${{pedido.valor}} </p>
+                </div>
+            </div>
+        </div>  
+        <div class="acoes">
+            <button class="botao">Salvar</button>
+            <button class="botao">Cancelar</button>
+        </div>      
     </form>
 </section>
