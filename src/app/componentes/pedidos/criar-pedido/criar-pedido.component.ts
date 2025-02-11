@@ -19,6 +19,14 @@ export class CriarPedidoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  criarPedido(){
+
+  }
+
+  cancelar(){
+    
+  }
+
   ajustarValor(input: { value: string; }) {
     if (!input.value.startsWith('R$')) {
         input.value = 'R$' + input.value.replace('R$', '');

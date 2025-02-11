@@ -44,7 +44,7 @@
                     type="radio" 
                     name="modelo-card" 
                     id="modelo1" 
-                    value="modelo1"
+                    [(ngModel)]="pedido.conteudo"
                     >
 
                     <div class="custom-radio">
@@ -118,8 +118,8 @@
             </div>
         </div>  
         <div class="acoes">
-            <button class="botao">Salvar</button>
-            <button class="botao">Cancelar</button>
+            <button (click)="criarPedido()" class="botao">Salvar</button>
+            <button (click)="cancelar()" class="botao">Cancelar</button>
         </div>      
     </form>
 </section>
