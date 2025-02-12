@@ -19,9 +19,10 @@
         <input 
         class="input" 
         type="textarea" 
+      
         name="descricao" 
         id="descricao"
-        placeholder="Digite a descrição do pedido"
+        placeholder="Digite uma descrição"
         [(ngModel)]="pedido.descricao"
         >
 
@@ -43,7 +44,8 @@
                     <input 
                     type="radio" 
                     name="modelo-card" 
-                    id="modelo1" 
+                    id="modelo1"
+                    value="modelo1" 
                     [(ngModel)]="pedido.modelo"
                     >
 
@@ -81,7 +83,7 @@
                     
                 </label>
                 Prévia:
-                <div class="modelo modelo1 ff-roboto-mono">
+                <div class="modelo modelo2 ff-roboto-mono">
                     Intensidade:
                     <i class="fa-solid fa-coffee fa-1x"></i>
                     <i class="fa-solid fa-coffee fa-1x"></i>
@@ -108,7 +110,7 @@
                     
                 </label>
                 Prévia:
-                <div class="modelo modelo1 ff-roboto-mono">
+                <div class="modelo modelo3 ff-roboto-mono">
                     Intensidade:
                     <i class="fa-solid fa-coffee fa-1x"></i>
                     <i class="fa-solid fa-coffee fa-1x"></i>

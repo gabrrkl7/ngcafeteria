@@ -10,6 +10,7 @@ import { CriarPedidoComponent } from './componentes/pedidos/criar-pedido/criar-p
 import { FormsModule } from '@angular/forms';
 import { ListarPedidoComponent } from './componentes/pedidos/listar-pedido/listar-pedido.component';
 import { PedidoComponent } from './componentes/pedidos/pedido/pedido.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PedidoComponent } from './componentes/pedidos/pedido/pedido.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PedidoService } from '../pedido.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-criar-pedido',
@@ -7,24 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarPedidoComponent implements OnInit {
   pedido = {
-    id: '1',
-    conteudo: 'aprendendo angular',
-    descricao: 'Café em grãos da mogiana paulista',
-    modelo:'modelo1',
-    valor:'23',
+    conteudo: '',
+    descricao: '',
+    modelo:'',
+    valor:'',
   }
 
-  constructor() { }
+  constructor(
+    private service: PedidoService, 
+    private router: Router
+  ) 
+    { }
 
   ngOnInit(): void {
   }
 
   criarPedido(){
-
+    this.service.criar(this.pedido).subscribe(() => {
+      this.router.navigate(['/listarPedido'])
+    })
   }
 
   cancelar(){
-    
+    this.router.navigate(['/listarPedido'])
   }
 
   ajustarValor(input: { value: string; }) {

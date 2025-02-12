@@ -1,7 +1,12 @@
 <div class="pedido {{ pedido.modelo }} ff-roboto-mono pedido-p">
-    <p class="conteudo"> {{pedido.conteudo}} </p>
-    <p class="descricao"> {{pedido.descricao}} </p>
-    <p class="valor"> R${{pedido.valor}} </p>
+    <div class="intensidade">
+        Intensidade:
+        <i class="fa-solid fa-coffee fa-1x" *ngFor="let icon of getIcons(pedido.modelo)"></i>
+    </div>
+    <p class="conteudo"><b>{{ pedido.conteudo }} </b></p>
+    <p class="descricao"> {{ pedido.descricao }} </p>
+    <p class="valor"> R${{ pedido.valor }} </p>
+    
     <div class="acoes">
         <button class="botao-editar">
             <img class="img-ico" src="../../../../assets/imagens-angular/imagensCurso/icone-editar.png">

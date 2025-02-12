@@ -1,4 +1,6 @@
+import { PedidoService } from './../pedido.service';
 import { Component, OnInit } from '@angular/core';
+import { Pedido } from '../pedido';
 
 @Component({
   selector: 'app-listar-pedido',
@@ -7,18 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarPedidoComponent implements OnInit {
   
-  listaPedidos = [
-    {
-      conteudo: 'Comunicação componentes',
-      descricao: 'Angular',
-      valor: 'R$ 200',
-      modelo: 'modelo1',
-    }
-  ]
+  listaPedidos: Pedido[] = []
 
-  constructor() { }
+  constructor(private service: PedidoService){ }
 
   ngOnInit(): void {
+    //this.service.listar().subscribe(resposta => this.listaPedidos = resposta)
+  
+    this.service.listar().subscribe((listaPedidos) => this.listaPedidos = listaPedidos)
   }
 
 }

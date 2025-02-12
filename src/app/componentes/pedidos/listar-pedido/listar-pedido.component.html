@@ -3,9 +3,15 @@
         <h2 class="ff-inter">Pedidos</h2>
         <button routerLink="/criarPedido" class="botao">Adicionar pedido</button>
     </header>
-    <div class="mural">
+    <div class="mural" *ngIf="listaPedidos.length > 0, else semPedidos">
         <div *ngFor="let pedido of listaPedidos">
-            <app-pedido></app-pedido>
+            <app-pedido [pedido]="pedido"></app-pedido>
         </div>
     </div>
 </section>
+
+<ng-template #semPedidos>
+    <div class="ff-inter sem-pedidos">
+        <p>Ainda não há pedidos</p>
+    </div>
+</ng-template>

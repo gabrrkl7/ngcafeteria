@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Pedido } from '../pedido';
 
 @Component({
   selector: 'app-pedido',
@@ -6,12 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pedido.component.css']
 })
 export class PedidoComponent implements OnInit {
-  pedido ={
-    conteudo: 'Nâmathyy',
-    descricao: 'namorada de 1,63cm',
-    valor: 'R$ inestimável',
-    modelo: 'modelo1',
+
+  @Input() pedido: Pedido = {
+    conteudo: '',
+    descricao: '',
+    valor: '',
+    modelo: ''  
   }
+
+
+  getIcons(modelo: string): number[] {
+    switch (modelo) {
+        case 'modelo1':
+            return [1];
+        case 'modelo2':
+            return [1, 1];
+        case 'modelo3':
+            return [1, 1, 1];
+        default:
+            return [];
+    }
+}
+
 
   constructor() { }
 
