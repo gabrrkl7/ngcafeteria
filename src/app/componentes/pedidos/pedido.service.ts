@@ -26,4 +26,8 @@ export class PedidoService {
     const url = `${this.API}/${id}`;
     return this.http.get<Pedido>(url);
   }
+  editar(pedido: Pedido): Observable<Pedido> {
+    const url = `${this.API}/${pedido.id}`;
+    return this.http.put<Pedido>(url, pedido);
+  }
 }

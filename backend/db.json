@@ -2,10 +2,10 @@
   "pedidos": [
     {
       "id": 1,
-      "conteudo": "Café aroma",
+      "conteudo": "Cacuzin",
       "descricao": "Café extraido da região do Cerrado Mineiro",
       "valor": 5.99,
-      "modelo": "modelo2"
+      "modelo": "modelo1"
     },
     {
       "id": 2,

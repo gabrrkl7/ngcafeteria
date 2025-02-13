@@ -1,0 +1,129 @@
+<section class="container editar-pedidos">
+    <header class="header">
+        <h2>
+            Adicione um<br>pedido:
+        </h2>
+    </header>
+    <form>
+        <label for="pedido">Pedido</label>
+        <input 
+        class="input" 
+        type="textarea" 
+        name="pedido" 
+        id="pedido" 
+        placeholder="Qual o seu pedido?"
+        [(ngModel)]="pedido.conteudo"
+        >
+
+        <label for="descricao">Descrição</label>
+        <input 
+        class="input" 
+        type="textarea" 
+      
+        name="descricao" 
+        id="descricao"
+        placeholder="Digite uma descrição"
+        [(ngModel)]="pedido.descricao"
+        >
+
+        <label for="valor">Valor</label>
+        <input 
+        class="input-valor" 
+        type="number" 
+        name="valor" 
+        id="valor"
+        placeholder="Digite o valor do pedido"
+        oninput="ajustarValor(this);" 
+        [(ngModel)]="pedido.valor"
+        >
+
+        <label for="modelo">Como você gostaria do seu café?</label>
+        <div class="container-radio">
+            <div class="radio-modelo">
+                <label for="modelo1">
+                    <input 
+                    type="radio" 
+                    name="modelo-card" 
+                    id="modelo1"
+                    value="modelo1" 
+                    [(ngModel)]="pedido.modelo"
+                    >
+
+                    <div class="custom-radio">
+                        <span></span>
+                    </div>
+                    <span class="ff-roboto-mono">Fraco</span>    
+                </label>
+
+
+                Prévia:
+                <div class="modelo modelo1 ff-roboto-mono">
+                    Intensidade:
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <p class="conteudo"> {{pedido.conteudo}} </p>
+                    <p class="descricao"><b> {{pedido.descricao}} </b></p>
+                    <p class="valor"> R${{pedido.valor}} </p>
+                </div>
+            </div>
+
+            <div class="radio-modelo">
+                <label for="modelo2">
+                    <input 
+                    type="radio" 
+                    name="modelo-card" 
+                    id="modelo2" 
+                    value="modelo2"
+                    [(ngModel)]="pedido.modelo"
+                    >
+
+                    <div class="custom-radio">
+                        <span></span>
+                    </div>
+                    <span class="ff-roboto-mono">Médio</span>
+                    
+                </label>
+                Prévia:
+                <div class="modelo modelo2 ff-roboto-mono">
+                    Intensidade:
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <p class="conteudo"> {{pedido.conteudo}} </p>
+                    <p class="descricao"><b> {{pedido.descricao}} </b></p>
+                    <p class="valor"> R${{pedido.valor}} </p>
+                </div>
+            </div>
+
+            <div class="radio-modelo">
+                <label for="modelo3">
+                    <input 
+                    type="radio" 
+                    name="modelo-card" 
+                    id="modelo3" 
+                    value="modelo3"
+                    [(ngModel)]="pedido.modelo"
+                    >
+
+                    <div class="custom-radio">
+                        <span></span>
+                    </div>
+                    <span class="ff-roboto-mono">Forte</span>
+                    
+                </label>
+                Prévia:
+                <div class="modelo modelo3 ff-roboto-mono">
+                    Intensidade:
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <i class="fa-solid fa-coffee fa-1x"></i>
+                    <p class="conteudo"><b> {{pedido.conteudo}} </b></p>
+                    <p class="descricao"> {{pedido.descricao}} </p>
+                    <p class="valor"> R${{pedido.valor}} </p>
+                </div>
+            </div>
+        </div>  
+        <div class="acoes">
+            <button (click)="editarPedido()" class="botao">Salvar</button>
+            <button class="botao" routerLink="/listarPedido">Cancelar</button>
+        </div>      
+    </form>
+</section>

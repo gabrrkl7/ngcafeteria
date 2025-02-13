@@ -12,6 +12,7 @@ import { ListarPedidoComponent } from './componentes/pedidos/listar-pedido/lista
 import { PedidoComponent } from './componentes/pedidos/pedido/pedido.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ExcluirPedidoComponent } from './componentes/pedidos/excluir-pedido/excluir-pedido.component';
+import { EditarPedidoComponent } from './componentes/pedidos/editar-pedido/editar-pedido.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { ExcluirPedidoComponent } from './componentes/pedidos/excluir-pedido/exc
     CriarPedidoComponent,
     ListarPedidoComponent,
     PedidoComponent,
-    ExcluirPedidoComponent
+    ExcluirPedidoComponent,
+    EditarPedidoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
