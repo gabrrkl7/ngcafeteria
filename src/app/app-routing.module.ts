@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CriarPedidoComponent } from './componentes/pedidos/criar-pedido/criar-pedido.component';
 import { ListarPedidoComponent } from './componentes/pedidos/listar-pedido/listar-pedido.component';
+import { ExcluirPedidoComponent } from './componentes/pedidos/excluir-pedido/excluir-pedido.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   { path: 'listarPedido',
     component: ListarPedidoComponent
    },
+   {
+    path: 'pedidos/excluirPedido/:id',
+    component: ExcluirPedidoComponent
+   }
 ];
 
 @NgModule({

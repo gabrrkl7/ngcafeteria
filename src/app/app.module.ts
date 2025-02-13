@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ListarPedidoComponent } from './componentes/pedidos/listar-pedido/listar-pedido.component';
 import { PedidoComponent } from './componentes/pedidos/pedido/pedido.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExcluirPedidoComponent } from './componentes/pedidos/excluir-pedido/excluir-pedido.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     CriarPedidoComponent,
     ListarPedidoComponent,
-    PedidoComponent
+    PedidoComponent,
+    ExcluirPedidoComponent
   ],
   imports: [
     BrowserModule,

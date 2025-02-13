@@ -15,7 +15,15 @@ export class PedidoService {
   listar(): Observable<Pedido[]> {
     return this.http.get<Pedido[]>(this.API);
   }
-  criar(pedido:Pedido): Observable<Pedido> {
+  criar(pedido: Pedido): Observable<Pedido> {
     return this.http.post<Pedido>(this.API, pedido);
+  }
+  excluir(id:number): Observable<Pedido> {
+   const url = `${this.API}/${id}`;
+   return this.http.delete<Pedido>(url);
+  }
+  buscarPorId(id: number): Observable<Pedido> {
+    const url = `${this.API}/${id}`;
+    return this.http.get<Pedido>(url);
   }
 }
